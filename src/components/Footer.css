@@ -1,0 +1,233 @@
+/* ===============================
+   MAIN FOOTER
+================================ */
+.lucifer-footer {
+  background: radial-gradient(circle at top, #1a0000, #000);
+  color: #aaa;
+  padding: 90px 0 25px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* RED SMOKE ANIMATION */
+.lucifer-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,0,0,0.18), transparent 65%);
+  animation: smoke 6s infinite alternate;
+}
+
+@keyframes smoke {
+  from { opacity: 0.3; }
+  to   { opacity: 0.6; }
+}
+
+/* ===============================
+   ENTRY ANIMATION
+================================ */
+.lucifer-animate {
+  opacity: 0;
+  animation: rise 1.2s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.4s; }
+.delay-2 { animation-delay: 0.8s; }
+
+@keyframes rise {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   LOGO
+================================ */
+.lucifer-logo {
+  font-size: 46px;
+  letter-spacing: 6px;
+  color: red;
+  text-shadow: 0 0 30px red;
+  animation: flicker 2.8s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  40% { opacity: 0.7; }
+  60% { opacity: 0.9; }
+}
+
+/* TEXT */
+.lucifer-text {
+  margin-top: 15px;
+  color: #bbb;
+  line-height: 1.8;
+}
+
+/* ===============================
+   TITLES
+================================ */
+.lucifer-title {
+  color: #fff;
+  margin-bottom: 15px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.lucifer-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 3px;
+  height: 100%;
+  background: red;
+  box-shadow: 0 0 12px red;
+}
+
+/* ===============================
+   LINKS
+================================ */
+.lucifer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.lucifer-links li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.lucifer-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: 0.4s;
+}
+
+.lucifer-links li:hover {
+  color: red;
+  letter-spacing: 2px;
+}
+
+.lucifer-links li:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   CONTACT
+================================ */
+.lucifer-address {
+  color: #aaa;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.lucifer-address:hover {
+  color: red;
+}
+
+/* PHONE – HEARTBEAT */
+.lucifer-phone {
+  color: red;
+  text-shadow: 0 0 15px red;
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0%   { text-shadow: 0 0 10px red; }
+  50%  { text-shadow: 0 0 30px red; }
+  100% { text-shadow: 0 0 10px red; }
+}
+
+/* EMAIL */
+.lucifer-insta {
+  color: #ccc;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.lucifer-insta::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: 0.4s;
+}
+
+.lucifer-insta:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================ */
+/* INSTAGRAM CLICK EFFECT */
+.insta-click {
+  color: #fff;
+  font-size: 22px;
+  position: relative;
+  display: inline-flex;
+  transition: all 0.4s ease;
+}
+
+.insta-click::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.4);
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.insta-click:active::after {
+  transform: scale(2.5);
+  opacity: 1;
+}
+
+.insta-click:hover {
+  color: red;
+  transform: scale(1.5) rotate(15deg);
+  text-shadow: 0 0 25px red;
+}
+
+.lucifer-social {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+
+/* ===============================
+   BOTTOM
+================================ */
+.lucifer-bottom {
+  margin-top: 55px;
+  padding-top: 15px;
+  border-top: 1px solid #220000;
+  text-align: center;
+  font-size: 14px;
+}
+
+.lucifer-bottom span {
+  color: red;
+}

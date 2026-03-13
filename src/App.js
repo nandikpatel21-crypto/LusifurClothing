@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ShopPage from "./components/ShopPage";
+import OrderPage from "./components/OrderPage";
+import CustomNavbar from "./components/CustomNavbar";
+import HeroSection from "./components/HeroSection";
+import NewArrivalsPage from "./components/NewArrivalsPage";
+import AboutPage from "./components/AboutPage";
+import LookbookPage from "./components/LookbookPage";
+import ContactPage from "./components/ContactPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {/* ✅ Navbar MUST be inside Router */}
+      <CustomNavbar />
+      
+
+      <Routes>
+        <Route path="/" element={<HeroSection />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/order" element={<OrderPage />} />
+        <Route path="/new" element={<NewArrivalsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/lookbook" element={<LookbookPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
